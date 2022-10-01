@@ -59,3 +59,5 @@
 // var color = prompt("Enter color name")
 
 // document.body.style.backgroundColor = color;
+
+var a = 5;
