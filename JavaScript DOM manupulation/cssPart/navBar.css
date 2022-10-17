@@ -1,0 +1,13 @@
+li {
+    text-decoration: none;
+    list-style: none;
+    margin-left: 100px;
+    font-size: larger;
+    background: #000;
+    color: white;
+    padding: 5px;
+}
+
+ul {
+    display: flex;
+}
