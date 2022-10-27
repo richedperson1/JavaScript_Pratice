@@ -21,3 +21,13 @@ var newDiv = document.createElement(divRwq)
 // newDiv.innerHTML = "<div><h1> Hello world<h1></div>"
 
 // ele.after(newDiv)
+
+newDiv.innerHTML = "<div><h1> Hello world<h1></div>"
+ele.append(newDiv)
+
+
+var divRaq = "div"
+
+var newDiv = document.createElement(divRaq)
+newDiv.innerHTML = "<div><h1> Hello world<h1></div>"
+ele.append(newDiv)
