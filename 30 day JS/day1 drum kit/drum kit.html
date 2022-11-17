@@ -60,11 +60,29 @@
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
     <script>
+        var ele = false
         document.addEventListener("keydown", function(e) {
-            let button_num = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-            console.log(button_num)
-                // console.log(e.keyCode)
+            ele = true
+            let audio_button = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+            let aurdio_key = document.querySelector(`div[data-key="${e.keyCode}"]`)
+                // console.log(audio_button)
+            if (!audio_button) return;
+
+            aurdio_key.classList.add("playing")
+                // aurdio_key.classList.remove("playing")a
+            audio_button.currentTime = 0;
+            audio_button.play();
+
         });
+
+        let allPlayingElement = document.querySelectorAll(".key");
+        allPlayingElement.forEach(removePlay)
+
+        function removePlay(key) {
+            key.addEventListener("transitionend", function(e) {
+                key.classList.remove("playing")
+            })
+        }
     </script>
 
 
